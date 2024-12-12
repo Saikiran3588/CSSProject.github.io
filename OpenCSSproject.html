@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PROJECT</title>
+</head>
+<body>
+
+    <div id="link">
+        <a href="http://127.0.0.1:5500/CSS%20project.html">
+            <p id="main">CSS PROJECT</p></a>
+    </div>
+    <style>
+        body{
+            background-color: #06435c;
+            text-align:center;
+            padding-top: 350px;
+            text-decoration: none;
+        }
+
+        #main{
+            margin-top: -50px;
+            font-size: 5rem;
+            color:cadetblue;
+        }
+        #main::before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 250px;
+            right:250px;
+            bottom:300px;
+            top: 250px;
+            background-color: rgb(240, 241, 243);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+            transform-origin: left;
+        }
+
+        #main:hover::before{
+            transform: scaleX(1);
+        }
+
+        #link a{
+            text-decoration: none;
+            box-shadow: white;
+        }
+    </style>
+</body>
+</html>
